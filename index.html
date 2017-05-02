@@ -59,10 +59,19 @@
     </p>
     <script>
         let children = document.body.children;
-        for (let i = 0; i < children.length; i = i + 1) {
-            console.log(children[i]);
-        }
+        
         children[0].textContent = "dominique";
+        
+        console.log(children[0].nodeName) ;
+        
+        for (let i = 0; i < children.length; i = i + 1) {
+            //si c'est un titre on le passe en uppercase
+            if(children[i].nodeName == "H1") {
+				children[i].style.textTransform = "uppercase";
+			}
+            
+        }
+        
     </script>
 </body>
 
